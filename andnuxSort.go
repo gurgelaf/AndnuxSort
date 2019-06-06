@@ -9,9 +9,9 @@ import (
 func main() {
 	var countN, maxr int
 
-	fmt.Printf("bem vindo ao Andnux Sort\n Digite o número de elementos:")
+	fmt.Printf("Welcome to Andnux Sort\n type the number of elements:")
 	fmt.Scan(&countN)
-	fmt.Println("Digite o valor máximo possível:")
+	fmt.Println("Type the maximum value:")
 	fmt.Scan(&maxr)
 
 	start := time.Now()
@@ -20,23 +20,23 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	fmt.Println("adicionando valores aleatórios...")
+	fmt.Println("adding random values...")
 
 	for i := 0; i < countN; i++ {
 		n[i] = rand.Intn(maxr - 1)
 	}
 
-	fmt.Println("Ordenando...")
+	fmt.Println("sorting...")
 
 	andnuxSort(n, countN)
 
-	fmt.Println("Valores Ordenados!")
+	fmt.Println("The values ware sorted!")
 
 	forr(n, countN)
 
-	fmt.Println("\nValores Mostrados!")
+	fmt.Println("\nDisplayed values")
 
-	fmt.Println("tempo de execução: ", time.Since(start))
+	fmt.Println("run time: ", time.Since(start))
 }
 
 func andnuxSort(n []int, countN int) {
