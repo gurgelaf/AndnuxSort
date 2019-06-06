@@ -1,5 +1,5 @@
 # AndnuxSort
-## Sorting Algoritm created by Andnux.
+## Sorting Algoritm created by Andre Filho.
 
 How to use:
   * Firstly you need to have go language installed in your computer.
