@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+//Main
+
 func main() {
 	var countN, maxr int
 
@@ -39,21 +41,10 @@ func main() {
 	fmt.Println("run time: ", time.Since(start))
 }
 
+//Andnux Sort
+
 func andnuxSort(n []int, countN int) {
-	var max, min, j, vM int = 0, 0, 0, -1
-
-	for i := 0; i < countN; i++ {
-		if max < n[i] {
-			max = n[i]
-		}
-	}
-
-	for i := 0; i < countN; i++ {
-		if min > n[i] {
-			min = n[i]
-		}
-	}
-
+	var j, vM, max int = 0, -1, max(n, countN)
 	aux, count := make([]int, max+1), make([]int, max+1)
 
 	for i := 0; i < max; i++ {
@@ -82,6 +73,18 @@ func andnuxSort(n []int, countN int) {
 			}
 		}
 	}
+}
+
+//Secondary functions
+
+func max(n []int, countN int) int {
+	max := 0
+	for i := 0; i < countN; i++ {
+		if max < n[i] {
+			max = n[i]
+		}
+	}
+	return max
 }
 
 func forr(n []int, countN int) {
